@@ -1,0 +1,15 @@
+pip3 install click
+pip3 install sklearn
+pip install torch===1.7.1+cu110 torchvision===0.8.2+cu110 torchaudio===0.7.2 -f https://download.pytorch.org/whl/torch_stable.html
+pip3 install notebook
+pip3 install tensorboard
+pip3 install numpy==1.19.3
+
+tensorboard --logdir runs
+
+add drop_last=True for dataloader when encounter:
+ Expected more than 1 value per channel when training
+ 
+ https://discuss.pytorch.org/t/error-expected-more-than-1-value-per-channel-when-training/26274/4
+ 
+ 
