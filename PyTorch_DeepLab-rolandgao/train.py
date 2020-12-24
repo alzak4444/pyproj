@@ -134,7 +134,7 @@ def train(model, path, epochs,optimizer, data_loader, data_loader_test, lr_sched
 
 def main():
     num_classes = 21
-    batch_size=2
+    batch_size=4
     epochs=30
     resume = False
     lr = 0.01
@@ -142,8 +142,8 @@ def main():
     weight_decay = 1e-4
     data_loader, data_loader_test=get_pascal_voc("pascal_voc_dataset",batch_size)
     eval_steps=300
-    resume_path = '/content/voc_regnetx40'
-    save_path = '/content/save/voc_regnetx40'
+    resume_path = './content/voc_regnetx40'
+    save_path = './content/save/voc_regnetx40'
 
     device = torch.device('cuda') if torch.cuda.is_available() else torch.device('cpu')
     epoch_start=0
