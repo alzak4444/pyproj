@@ -1,0 +1,281 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" DefaultTargets="Build">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{91530f4a-ad08-4c22-acb8-a109bd02f778}</ProjectGuid>
+    <ProjectHome />
+    <StartupFile>main.py</StartupFile>
+    <SearchPath />
+    <WorkingDirectory>.</WorkingDirectory>
+    <OutputPath>.</OutputPath>
+    <ProjectTypeGuids>{888888a0-9f3d-457c-b088-3a5042f75d52}</ProjectTypeGuids>
+    <LaunchProvider>Standard Python launcher</LaunchProvider>
+    <InterpreterId />
+    <SuppressEnvironmentCreationPrompt>True</SuppressEnvironmentCreationPrompt>
+    <SuppressConfigureTestFrameworkPrompt>true</SuppressConfigureTestFrameworkPrompt>
+    <CommandLineArguments>--data-directory CrackForest --exp_directory CFExp</CommandLineArguments>
+    <EnableNativeCodeDebugging>False</EnableNativeCodeDebugging>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)' == 'Debug'" />
+  <PropertyGroup Condition="'$(Configuration)' == 'Release'" />
+  <PropertyGroup>
+    <VisualStudioVersion Condition=" '$(VisualStudioVersion)' == '' ">10.0</VisualStudioVersion>
+  </PropertyGroup>
+  <ItemGroup>
+    <Content Include="CFExp\SegmentationOutput.png" />
+    <Content Include="CrackForest\Images\001.jpg" />
+    <Content Include="CrackForest\Images\002.jpg" />
+    <Content Include="CrackForest\Images\003.jpg" />
+    <Content Include="CrackForest\Images\004.jpg" />
+    <Content Include="CrackForest\Images\005.jpg" />
+    <Content Include="CrackForest\Images\006.jpg" />
+    <Content Include="CrackForest\Images\007.jpg" />
+    <Content Include="CrackForest\Images\008.jpg" />
+    <Content Include="CrackForest\Images\009.jpg" />
+    <Content Include="CrackForest\Images\010.jpg" />
+    <Content Include="CrackForest\Images\011.jpg" />
+    <Content Include="CrackForest\Images\012.jpg" />
+    <Content Include="CrackForest\Images\013.jpg" />
+    <Content Include="CrackForest\Images\014.jpg" />
+    <Content Include="CrackForest\Images\015.jpg" />
+    <Content Include="CrackForest\Images\016.jpg" />
+    <Content Include="CrackForest\Images\017.jpg" />
+    <Content Include="CrackForest\Images\018.jpg" />
+    <Content Include="CrackForest\Images\019.jpg" />
+    <Content Include="CrackForest\Images\020.jpg" />
+    <Content Include="CrackForest\Images\021.jpg" />
+    <Content Include="CrackForest\Images\022.jpg" />
+    <Content Include="CrackForest\Images\023.jpg" />
+    <Content Include="CrackForest\Images\024.jpg" />
+    <Content Include="CrackForest\Images\025.jpg" />
+    <Content Include="CrackForest\Images\026.jpg" />
+    <Content Include="CrackForest\Images\027.jpg" />
+    <Content Include="CrackForest\Images\028.jpg" />
+    <Content Include="CrackForest\Images\029.jpg" />
+    <Content Include="CrackForest\Images\030.jpg" />
+    <Content Include="CrackForest\Images\031.jpg" />
+    <Content Include="CrackForest\Images\032.jpg" />
+    <Content Include="CrackForest\Images\033.jpg" />
+    <Content Include="CrackForest\Images\034.jpg" />
+    <Content Include="CrackForest\Images\035.jpg" />
+    <Content Include="CrackForest\Images\036.jpg" />
+    <Content Include="CrackForest\Images\037.jpg" />
+    <Content Include="CrackForest\Images\038.jpg" />
+    <Content Include="CrackForest\Images\039.jpg" />
+    <Content Include="CrackForest\Images\040.jpg" />
+    <Content Include="CrackForest\Images\041.jpg" />
+    <Content Include="CrackForest\Images\042.jpg" />
+    <Content Include="CrackForest\Images\043.jpg" />
+    <Content Include="CrackForest\Images\044.jpg" />
+    <Content Include="CrackForest\Images\045.jpg" />
+    <Content Include="CrackForest\Images\046.jpg" />
+    <Content Include="CrackForest\Images\047.jpg" />
+    <Content Include="CrackForest\Images\048.jpg" />
+    <Content Include="CrackForest\Images\049.jpg" />
+    <Content Include="CrackForest\Images\050.jpg" />
+    <Content Include="CrackForest\Images\051.jpg" />
+    <Content Include="CrackForest\Images\052.jpg" />
+    <Content Include="CrackForest\Images\053.jpg" />
+    <Content Include="CrackForest\Images\054.jpg" />
+    <Content Include="CrackForest\Images\055.jpg" />
+    <Content Include="CrackForest\Images\056.jpg" />
+    <Content Include="CrackForest\Images\057.jpg" />
+    <Content Include="CrackForest\Images\058.jpg" />
+    <Content Include="CrackForest\Images\059.jpg" />
+    <Content Include="CrackForest\Images\060.jpg" />
+    <Content Include="CrackForest\Images\061.jpg" />
+    <Content Include="CrackForest\Images\062.jpg" />
+    <Content Include="CrackForest\Images\063.jpg" />
+    <Content Include="CrackForest\Images\064.jpg" />
+    <Content Include="CrackForest\Images\065.jpg" />
+    <Content Include="CrackForest\Images\066.jpg" />
+    <Content Include="CrackForest\Images\067.jpg" />
+    <Content Include="CrackForest\Images\068.jpg" />
+    <Content Include="CrackForest\Images\069.jpg" />
+    <Content Include="CrackForest\Images\070.jpg" />
+    <Content Include="CrackForest\Images\071.jpg" />
+    <Content Include="CrackForest\Images\072.jpg" />
+    <Content Include="CrackForest\Images\073.jpg" />
+    <Content Include="CrackForest\Images\074.jpg" />
+    <Content Include="CrackForest\Images\075.jpg" />
+    <Content Include="CrackForest\Images\076.jpg" />
+    <Content Include="CrackForest\Images\077.jpg" />
+    <Content Include="CrackForest\Images\078.jpg" />
+    <Content Include="CrackForest\Images\079.jpg" />
+    <Content Include="CrackForest\Images\080.jpg" />
+    <Content Include="CrackForest\Images\081.jpg" />
+    <Content Include="CrackForest\Images\082.jpg" />
+    <Content Include="CrackForest\Images\083.jpg" />
+    <Content Include="CrackForest\Images\084.jpg" />
+    <Content Include="CrackForest\Images\085.jpg" />
+    <Content Include="CrackForest\Images\086.jpg" />
+    <Content Include="CrackForest\Images\087.jpg" />
+    <Content Include="CrackForest\Images\088.jpg" />
+    <Content Include="CrackForest\Images\089.jpg" />
+    <Content Include="CrackForest\Images\090.jpg" />
+    <Content Include="CrackForest\Images\091.jpg" />
+    <Content Include="CrackForest\Images\092.jpg" />
+    <Content Include="CrackForest\Images\093.jpg" />
+    <Content Include="CrackForest\Images\094.jpg" />
+    <Content Include="CrackForest\Images\095.jpg" />
+    <Content Include="CrackForest\Images\096.jpg" />
+    <Content Include="CrackForest\Images\097.jpg" />
+    <Content Include="CrackForest\Images\098.jpg" />
+    <Content Include="CrackForest\Images\099.jpg" />
+    <Content Include="CrackForest\Images\100.jpg" />
+    <Content Include="CrackForest\Images\101.jpg" />
+    <Content Include="CrackForest\Images\102.jpg" />
+    <Content Include="CrackForest\Images\103.jpg" />
+    <Content Include="CrackForest\Images\104.jpg" />
+    <Content Include="CrackForest\Images\105.jpg" />
+    <Content Include="CrackForest\Images\106.jpg" />
+    <Content Include="CrackForest\Images\107.jpg" />
+    <Content Include="CrackForest\Images\108.jpg" />
+    <Content Include="CrackForest\Images\109.jpg" />
+    <Content Include="CrackForest\Images\110.jpg" />
+    <Content Include="CrackForest\Images\111.jpg" />
+    <Content Include="CrackForest\Images\112.jpg" />
+    <Content Include="CrackForest\Images\113.jpg" />
+    <Content Include="CrackForest\Images\114.jpg" />
+    <Content Include="CrackForest\Images\115.jpg" />
+    <Content Include="CrackForest\Images\116.jpg" />
+    <Content Include="CrackForest\Images\117.jpg" />
+    <Content Include="CrackForest\Images\118.jpg" />
+    <Content Include="CrackForest\Masks\001_label.PNG" />
+    <Content Include="CrackForest\Masks\002_label.PNG" />
+    <Content Include="CrackForest\Masks\003_label.PNG" />
+    <Content Include="CrackForest\Masks\004_label.PNG" />
+    <Content Include="CrackForest\Masks\005_label.PNG" />
+    <Content Include="CrackForest\Masks\006_label.PNG" />
+    <Content Include="CrackForest\Masks\007_label.PNG" />
+    <Content Include="CrackForest\Masks\008_label.PNG" />
+    <Content Include="CrackForest\Masks\009_label.PNG" />
+    <Content Include="CrackForest\Masks\010_label.PNG" />
+    <Content Include="CrackForest\Masks\011_label.PNG" />
+    <Content Include="CrackForest\Masks\012_label.PNG" />
+    <Content Include="CrackForest\Masks\013_label.PNG" />
+    <Content Include="CrackForest\Masks\014_label.PNG" />
+    <Content Include="CrackForest\Masks\015_label.PNG" />
+    <Content Include="CrackForest\Masks\016_label.PNG" />
+    <Content Include="CrackForest\Masks\017_label.PNG" />
+    <Content Include="CrackForest\Masks\018_label.PNG" />
+    <Content Include="CrackForest\Masks\019_label.PNG" />
+    <Content Include="CrackForest\Masks\020_label.PNG" />
+    <Content Include="CrackForest\Masks\021_label.PNG" />
+    <Content Include="CrackForest\Masks\022_label.PNG" />
+    <Content Include="CrackForest\Masks\023_label.PNG" />
+    <Content Include="CrackForest\Masks\024_label.PNG" />
+    <Content Include="CrackForest\Masks\025_label.PNG" />
+    <Content Include="CrackForest\Masks\026_label.PNG" />
+    <Content Include="CrackForest\Masks\027_label.PNG" />
+    <Content Include="CrackForest\Masks\028_label.PNG" />
+    <Content Include="CrackForest\Masks\029_label.PNG" />
+    <Content Include="CrackForest\Masks\030_label.PNG" />
+    <Content Include="CrackForest\Masks\031_label.PNG" />
+    <Content Include="CrackForest\Masks\032_label.PNG" />
+    <Content Include="CrackForest\Masks\033_label.PNG" />
+    <Content Include="CrackForest\Masks\034_label.PNG" />
+    <Content Include="CrackForest\Masks\035_label.PNG" />
+    <Content Include="CrackForest\Masks\036_label.PNG" />
+    <Content Include="CrackForest\Masks\037_label.PNG" />
+    <Content Include="CrackForest\Masks\038_label.PNG" />
+    <Content Include="CrackForest\Masks\039_label.PNG" />
+    <Content Include="CrackForest\Masks\040_label.PNG" />
+    <Content Include="CrackForest\Masks\041_label.PNG" />
+    <Content Include="CrackForest\Masks\042_label.PNG" />
+    <Content Include="CrackForest\Masks\043_label.PNG" />
+    <Content Include="CrackForest\Masks\044_label.PNG" />
+    <Content Include="CrackForest\Masks\045_label.PNG" />
+    <Content Include="CrackForest\Masks\046_label.PNG" />
+    <Content Include="CrackForest\Masks\047_label.PNG" />
+    <Content Include="CrackForest\Masks\048_label.PNG" />
+    <Content Include="CrackForest\Masks\049_label.PNG" />
+    <Content Include="CrackForest\Masks\050_label.PNG" />
+    <Content Include="CrackForest\Masks\051_label.PNG" />
+    <Content Include="CrackForest\Masks\052_label.PNG" />
+    <Content Include="CrackForest\Masks\053_label.PNG" />
+    <Content Include="CrackForest\Masks\054_label.PNG" />
+    <Content Include="CrackForest\Masks\055_label.PNG" />
+    <Content Include="CrackForest\Masks\056_label.PNG" />
+    <Content Include="CrackForest\Masks\057_label.PNG" />
+    <Content Include="CrackForest\Masks\058_label.PNG" />
+    <Content Include="CrackForest\Masks\059_label.PNG" />
+    <Content Include="CrackForest\Masks\060_label.PNG" />
+    <Content Include="CrackForest\Masks\061_label.PNG" />
+    <Content Include="CrackForest\Masks\062_label.PNG" />
+    <Content Include="CrackForest\Masks\063_label.PNG" />
+    <Content Include="CrackForest\Masks\064_label.PNG" />
+    <Content Include="CrackForest\Masks\065_label.PNG" />
+    <Content Include="CrackForest\Masks\066_label.PNG" />
+    <Content Include="CrackForest\Masks\067_label.PNG" />
+    <Content Include="CrackForest\Masks\068_label.PNG" />
+    <Content Include="CrackForest\Masks\069_label.PNG" />
+    <Content Include="CrackForest\Masks\070_label.PNG" />
+    <Content Include="CrackForest\Masks\071_label.PNG" />
+    <Content Include="CrackForest\Masks\072_label.PNG" />
+    <Content Include="CrackForest\Masks\073_label.PNG" />
+    <Content Include="CrackForest\Masks\074_label.PNG" />
+    <Content Include="CrackForest\Masks\075_label.PNG" />
+    <Content Include="CrackForest\Masks\076_label.PNG" />
+    <Content Include="CrackForest\Masks\077_label.PNG" />
+    <Content Include="CrackForest\Masks\078_label.PNG" />
+    <Content Include="CrackForest\Masks\079_label.PNG" />
+    <Content Include="CrackForest\Masks\080_label.PNG" />
+    <Content Include="CrackForest\Masks\081_label.PNG" />
+    <Content Include="CrackForest\Masks\082_label.PNG" />
+    <Content Include="CrackForest\Masks\083_label.PNG" />
+    <Content Include="CrackForest\Masks\084_label.PNG" />
+    <Content Include="CrackForest\Masks\085_label.PNG" />
+    <Content Include="CrackForest\Masks\086_label.PNG" />
+    <Content Include="CrackForest\Masks\087_label.PNG" />
+    <Content Include="CrackForest\Masks\088_label.PNG" />
+    <Content Include="CrackForest\Masks\089_label.PNG" />
+    <Content Include="CrackForest\Masks\090_label.PNG" />
+    <Content Include="CrackForest\Masks\091_label.PNG" />
+    <Content Include="CrackForest\Masks\092_label.PNG" />
+    <Content Include="CrackForest\Masks\093_label.PNG" />
+    <Content Include="CrackForest\Masks\094_label.PNG" />
+    <Content Include="CrackForest\Masks\095_label.PNG" />
+    <Content Include="CrackForest\Masks\096_label.PNG" />
+    <Content Include="CrackForest\Masks\097_label.PNG" />
+    <Content Include="CrackForest\Masks\098_label.PNG" />
+    <Content Include="CrackForest\Masks\099_label.PNG" />
+    <Content Include="CrackForest\Masks\100_label.PNG" />
+    <Content Include="CrackForest\Masks\101_label.PNG" />
+    <Content Include="CrackForest\Masks\102_label.PNG" />
+    <Content Include="CrackForest\Masks\103_label.PNG" />
+    <Content Include="CrackForest\Masks\104_label.PNG" />
+    <Content Include="CrackForest\Masks\105_label.PNG" />
+    <Content Include="CrackForest\Masks\106_label.PNG" />
+    <Content Include="CrackForest\Masks\107_label.PNG" />
+    <Content Include="CrackForest\Masks\108_label.PNG" />
+    <Content Include="CrackForest\Masks\109_label.PNG" />
+    <Content Include="CrackForest\Masks\110_label.PNG" />
+    <Content Include="CrackForest\Masks\111_label.PNG" />
+    <Content Include="CrackForest\Masks\112_label.PNG" />
+    <Content Include="CrackForest\Masks\113_label.PNG" />
+    <Content Include="CrackForest\Masks\114_label.PNG" />
+    <Content Include="CrackForest\Masks\115_label.PNG" />
+    <Content Include="CrackForest\Masks\116_label.PNG" />
+    <Content Include="CrackForest\Masks\117_label.PNG" />
+    <Content Include="CrackForest\Masks\118_label.PNG" />
+    <Content Include="requirements.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="datahandler.py" />
+    <Compile Include="main.py" />
+    <Compile Include="model.py" />
+    <Compile Include="segdataset.py" />
+    <Compile Include="Tests\test_segmentation_dataset.py" />
+    <Compile Include="trainer.py" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="CFExp" />
+    <Folder Include="CrackForest\" />
+    <Folder Include="CrackForest\Images" />
+    <Folder Include="CrackForest\Masks" />
+    <Folder Include="Tests" />
+  </ItemGroup>
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\Python Tools\Microsoft.PythonTools.targets" />
+</Project>

@@ -1,0 +1,23 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30804.86
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{888888A0-9F3D-457C-B088-3A5042F75D52}") = "DeepLabv3FineTuning", "DeepLabv3FineTuning.pyproj", "{91530F4A-AD08-4C22-ACB8-A109BD02F778}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{91530F4A-AD08-4C22-ACB8-A109BD02F778}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{91530F4A-AD08-4C22-ACB8-A109BD02F778}.Release|Any CPU.ActiveCfg = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {17F55F30-B32F-43FF-944C-3A0376E5D001}
+	EndGlobalSection
+EndGlobal

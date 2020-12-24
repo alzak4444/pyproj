@@ -1,4 +1,18 @@
-*.zip
+.vscode
 .vs
-/Pytorch-UNet-master/runs*
-/Pytorch-UNet-master/data/*
+**/.ipynb_checkpoints
+**/weights.pt
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# C extensions
+*.so
+
+
+*.zip
+**/CFExp
+**/imgs
+**/mask
+**/runs
