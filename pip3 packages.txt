@@ -4,6 +4,7 @@ pip install torch===1.7.1+cu110 torchvision===0.8.2+cu110 torchaudio===0.7.2 -f 
 pip3 install notebook
 pip3 install tensorboard
 pip3 install numpy==1.19.3
+pip3 install pandas
 
 tensorboard --logdir runs
 
