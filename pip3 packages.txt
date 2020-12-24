@@ -6,6 +6,9 @@ pip3 install tensorboard
 pip3 install numpy==1.19.3
 pip3 install pandas
 
+pip3 install timm
+pip3 install pycocotools
+
 tensorboard --logdir runs
 
 add drop_last=True for dataloader when encounter:
