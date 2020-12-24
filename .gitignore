@@ -1,1 +1,4 @@
 *.zip
+.vs
+/Pytorch-UNet-master/runs*
+/Pytorch-UNet-master/data/*
