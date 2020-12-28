@@ -31,7 +31,7 @@ def worker_init_fn(worker_id):
     from datetime import datetime
     np.random.seed(datetime.now().microsecond)
 def get_dataloader_train(dataset,batch_size):
-    num_workers = 2
+    num_workers = 4
     #dataset = get_coco(image_folder, ann_file, "train",get_temp_transform())
     train_sampler = torch.utils.data.RandomSampler(dataset)
     data_loader = torch.utils.data.DataLoader(
