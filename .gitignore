@@ -17,3 +17,4 @@ __pycache__
 **/imgs
 **/mask
 **/runs
+*.pth
