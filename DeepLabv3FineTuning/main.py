@@ -44,6 +44,7 @@ def main(data_directory, exp_directory, epochs, batch_size):
 
     # Specify the evaluation metrics
     metrics = {'f1_score': f1_score, 'auroc': roc_auc_score}
+    print(' * batch size {}'.format(batch_size))
 
     # Create the dataloader
     dataloaders = datahandler.get_dataloader_single_folder(

@@ -14,7 +14,7 @@
     <InterpreterId />
     <SuppressEnvironmentCreationPrompt>True</SuppressEnvironmentCreationPrompt>
     <SuppressConfigureTestFrameworkPrompt>true</SuppressConfigureTestFrameworkPrompt>
-    <CommandLineArguments>--data-directory CrackForest --exp_directory CFExp</CommandLineArguments>
+    <CommandLineArguments>--data-directory testWire --exp_directory CFExp</CommandLineArguments>
     <EnableNativeCodeDebugging>False</EnableNativeCodeDebugging>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)' == 'Debug'" />
