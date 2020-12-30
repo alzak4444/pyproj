@@ -8,6 +8,7 @@ pip3 install pandas
 
 pip3 install timm
 pip3 install pycocotools
+pip install opencv-python
 
 tensorboard --logdir runs
 
@@ -16,4 +17,9 @@ add drop_last=True for dataloader when encounter:
  
  https://discuss.pytorch.org/t/error-expected-more-than-1-value-per-channel-when-training/26274/4
  
+ if got error:
+ pip is configured with locations that require TLS/SSL, however the ssl module in Python is not available.
+
+install openSSL
+ https://slproweb.com/products/Win32OpenSSL.html
  
