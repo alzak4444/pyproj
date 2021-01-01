@@ -23,7 +23,7 @@ class SegmentationDataset(VisionDataset):
                  seed: int = None,
                  fraction: float = None,
                  subset: str = None,
-                 image_color_mode: str = "rgb",
+                 image_color_mode: str = "grayscale",
                  mask_color_mode: str = "grayscale") -> None:
         """
         Args:

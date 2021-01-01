@@ -30,6 +30,7 @@ def main(data_directory, exp_directory, epochs, batch_size):
     # Create the deeplabv3 resnet101 model which is pretrained on a subset
     # of COCO train2017, on the 20 categories that are present in the Pascal VOC dataset.
     model = createDeepLabv3()
+    print(model)
     model.train()
     data_directory = Path(data_directory)
     # Create the experiment directory if not present
