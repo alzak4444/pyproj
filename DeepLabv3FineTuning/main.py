@@ -23,14 +23,14 @@ from trainer import train_model
     type=int,
     help="Specify the number of epochs you want to run the experiment for.")
 @click.option("--batch-size",
-              default=2,
+              default=4,
               type=int,
               help="Specify the batch size for the dataloader.")
 def main(data_directory, exp_directory, epochs, batch_size):
     # Create the deeplabv3 resnet101 model which is pretrained on a subset
     # of COCO train2017, on the 20 categories that are present in the Pascal VOC dataset.
     model = createDeepLabv3()
-    print(model)
+#    print(model)
     model.train()
     data_directory = Path(data_directory)
     # Create the experiment directory if not present
@@ -54,9 +54,10 @@ def main(data_directory, exp_directory, epochs, batch_size):
                     criterion,
                     dataloaders,
                     optimizer,
-                    bpath=exp_directory,
-                    metrics=metrics,
-                    num_epochs=epochs)
+                    metrics,
+                    exp_directory,
+                    epochs, 
+                    batch_size)
 
     # Save the trained model
     torch.save(model, exp_directory / 'weights.pt')

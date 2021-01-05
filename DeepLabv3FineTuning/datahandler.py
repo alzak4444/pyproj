@@ -77,24 +77,32 @@ def get_dataloader_single_folder(data_dir: str,
         dataloaders: Returns dataloaders dictionary containing the
         Train and Test dataloaders.
     """
-    data_transforms = transforms.Compose([transforms.ToTensor()])
+    transform1 = transforms.Compose([transforms.ToTensor()])
 
     image_datasets = {
-        x: SegmentationDataset(data_dir,
+        'Train': SegmentationDataset(data_dir,
+                               image_folder=image_folder,
+                               mask_folder=mask_folder,
+                               seed=100,
+                               isRandom = True,
+                               fraction=fraction,
+                               subset='Train',
+                               transforms=transform1),
+        'Test': SegmentationDataset(data_dir,
                                image_folder=image_folder,
                                mask_folder=mask_folder,
                                seed=100,
                                fraction=fraction,
-                               subset=x,
-                               transforms=data_transforms)
-        for x in ['Train', 'Test']
+                               subset='Test',
+                               transforms=transform1)
     }
+
     dataloaders = {
         x: DataLoader(image_datasets[x],
                       batch_size=batch_size,
                       shuffle=True,
                       drop_last=True,
-                      num_workers=4)
+                      num_workers=8)
         for x in ['Train', 'Test']
     }
     return dataloaders

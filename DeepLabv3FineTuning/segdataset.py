@@ -8,6 +8,7 @@ from typing import Any, Callable, Optional
 import numpy as np
 from PIL import Image
 from torchvision.datasets.vision import VisionDataset
+import torchvision.transforms.functional as TF
 
 
 class SegmentationDataset(VisionDataset):
@@ -22,8 +23,9 @@ class SegmentationDataset(VisionDataset):
                  transforms: Optional[Callable] = None,
                  seed: int = None,
                  fraction: float = None,
+                 isRandom: bool = False,
                  subset: str = None,
-                 image_color_mode: str = "grayscale",
+                 image_color_mode: str = "rgb",
                  mask_color_mode: str = "grayscale") -> None:
         """
         Args:
@@ -64,6 +66,7 @@ class SegmentationDataset(VisionDataset):
 
         self.image_color_mode = image_color_mode
         self.mask_color_mode = mask_color_mode
+        self.isRandom = isRandom
 
         if not fraction:
             self.image_names = sorted(image_folder_path.glob("*"))
@@ -111,8 +114,9 @@ class SegmentationDataset(VisionDataset):
                 mask = mask.convert("RGB")
             elif self.mask_color_mode == "grayscale":
                 mask = mask.convert("L")
-            sample = {"image": image, "mask": mask}
+
             if self.transforms:
-                sample["image"] = self.transforms(sample["image"])
-                sample["mask"] = self.transforms(sample["mask"])
+                image = self.transforms(image)
+                mask = self.transforms(mask)
+            sample = {"image": image, "mask": mask}
             return sample

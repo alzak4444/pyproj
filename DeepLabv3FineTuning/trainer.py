@@ -2,6 +2,7 @@ import copy
 import csv
 import os
 import time
+import kornia
 
 import numpy as np
 import torch
@@ -10,7 +11,7 @@ from torch.utils.tensorboard import SummaryWriter
 
 
 def train_model(model, criterion, dataloaders, optimizer, metrics, bpath,
-                num_epochs):
+                num_epochs, batch_size):
     since = time.time()
     best_model_wts = copy.deepcopy(model.state_dict())
     best_loss = 1e10
@@ -46,16 +47,41 @@ def train_model(model, criterion, dataloaders, optimizer, metrics, bpath,
             for sample in tqdm(iter(dataloaders[phase])):
                 inputs = sample['image'].to(device)
                 masks = sample['mask'].to(device)
+
+                # Random horizontal flipping / translate / rotate
+                if phase == 'Train':
+                    transs = []
+                    if np.random.uniform(0, 1.0) > 0.5:
+                        transs.append(kornia.Hflip())
+                    if np.random.uniform(0, 1.0) > 0.5:
+                        transs.append(kornia.Vflip())
+#                    if np.random.uniform(0, 1.0) > 0.5:
+#                        dx = np.random.uniform(-100, 100)
+#                        dy = np.random.uniform(-100, 100)
+#                        par = torch.tensor([dx,dy])
+#                        par = par.cuda()
+#                        transs.append(kornia.Translate(par.repeat(batch_size, 1)))
+                    if np.random.uniform(0, 1.0) > 0.5:
+                        angle = np.random.uniform(0, 3.0)
+                        par = torch.tensor(angle)
+                        par = par.cuda()
+                        transs.append(kornia.Rotate(par.repeat(batch_size)))
+
+                    if len(transs) > 0:
+                        tr1 = torch.nn.Sequential(*transs)
+                        inputs = tr1(inputs)
+                        masks = tr1(masks)
+
                 # zero the parameter gradients
                 optimizer.zero_grad()
 
                 # track history if only in train
                 with torch.set_grad_enabled(phase == 'Train'):
-                    outputs = model(inputs)
-                    loss = criterion(outputs['out'], masks)
+                    outputs = model(inputs) # returns a dict
                     out1 = outputs['out']
+                    loss = criterion(out1, masks)
 
-                    y_pred = outputs['out'].data.cpu().numpy().ravel()
+                    y_pred = out1.data.cpu().numpy().ravel()
                     y_true = masks.data.cpu().numpy().ravel()
                     for name, metric in metrics.items():
                         if name == 'f1_score':
@@ -88,6 +114,10 @@ def train_model(model, criterion, dataloaders, optimizer, metrics, bpath,
         for field in fieldnames[3:]:
             batchsummary[field] = np.mean(batchsummary[field])
         print(batchsummary)
+
+        if epoch % 4 == 0 and epoch < num_epochs :
+            torch.save(model, bpath / f'weights-{epoch}.pt')
+
         with open(os.path.join(bpath, 'log.csv'), 'a', newline='') as csvfile:
             writer = csv.DictWriter(csvfile, fieldnames=fieldnames)
             writer.writerow(batchsummary)
