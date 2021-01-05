@@ -81,16 +81,16 @@ def train_model(model, criterion, dataloaders, optimizer, metrics, bpath,
                     out1 = outputs['out']
                     loss = criterion(out1, masks)
 
-                    y_pred = out1.data.cpu().numpy().ravel()
-                    y_true = masks.data.cpu().numpy().ravel()
-                    for name, metric in metrics.items():
-                        if name == 'f1_score':
+#                    y_pred = out1.data.cpu().numpy().ravel()
+#                    y_true = masks.data.cpu().numpy().ravel()
+#                    for name, metric in metrics.items():
+#                        if name == 'f1_score':
                             # Use a classification threshold of 0.1
-                            batchsummary[f'{phase}_{name}'].append(
-                                metric(y_true > 0, y_pred > 0.1))
-                        else:
-                            batchsummary[f'{phase}_{name}'].append(
-                                metric(y_true.astype('uint8'), y_pred))
+#                            batchsummary[f'{phase}_{name}'].append(
+#                                metric(y_true > 0, y_pred > 0.1))
+#                        else:
+#                            batchsummary[f'{phase}_{name}'].append(
+#                                metric(y_true.astype('uint8'), y_pred))
 
                     # backward + optimize only if in training phase
                     global_step += 1
@@ -100,16 +100,16 @@ def train_model(model, criterion, dataloaders, optimizer, metrics, bpath,
                         loss.backward()
                         optimizer.step()
 
-                        if global_step % (4) == 0:
-                            boardwriter.add_images('images', inputs, global_step)
-                            boardwriter.add_images('masks_true', masks, global_step)
-                            boardwriter.add_images('masks_pred', out1, global_step)
+#                        if global_step % (4) == 0:
+#                            boardwriter.add_images('images', inputs, global_step)
+#                            boardwriter.add_images('masks_true', masks, global_step)
+#                            boardwriter.add_images('masks_pred', out1, global_step)
                     else:
                         boardwriter.add_scalar('Loss/test', loss.item(), global_step)
 
+            vItem = loss.item()
             batchsummary['epoch'] = epoch
-            epoch_loss = loss
-            batchsummary[f'{phase}_loss'] = epoch_loss.item()
+            batchsummary[f'{phase}_loss'] = vItem
             print('{} Loss: {:.4f}'.format(phase, loss))
         for field in fieldnames[3:]:
             batchsummary[field] = np.mean(batchsummary[field])

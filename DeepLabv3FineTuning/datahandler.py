@@ -102,7 +102,7 @@ def get_dataloader_single_folder(data_dir: str,
                       batch_size=batch_size,
                       shuffle=True,
                       drop_last=True,
-                      num_workers=8)
+                      num_workers=4)
         for x in ['Train', 'Test']
     }
     return dataloaders
