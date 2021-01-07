@@ -17,7 +17,7 @@ def createDeepLabv3(outputchannels=1):
                                                     progress=True)
     model.classifier = DeepLabHead(2048, outputchannels)
     # change for grayscale
-#    model.backbone.conv1 = nn.Conv2d(1, 64, kernel_size=7, stride=2, padding=3, bias=False)
+    model.backbone.conv1 = nn.Conv2d(1, 64, kernel_size=7, stride=2, padding=3, bias=False)
     # also need to change SegmentationDataSet to use grayscale
 
     # Set the model in training mode

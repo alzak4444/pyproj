@@ -7,6 +7,7 @@ from typing import Any, Callable, Optional
 
 import numpy as np
 from PIL import Image
+import cv2
 from torchvision.datasets.vision import VisionDataset
 import torchvision.transforms.functional as TF
 
@@ -25,7 +26,7 @@ class SegmentationDataset(VisionDataset):
                  fraction: float = None,
                  isRandom: bool = False,
                  subset: str = None,
-                 image_color_mode: str = "rgb",
+                 image_color_mode: str = "grayscale",
                  mask_color_mode: str = "grayscale") -> None:
         """
         Args:
@@ -99,6 +100,19 @@ class SegmentationDataset(VisionDataset):
     def __len__(self) -> int:
         return len(self.image_names)
 
+    def __getitem__notwork(self, index: int) -> Any:
+        image_path = self.image_names[index]
+        mask_path = self.mask_names[index]
+        with open(image_path, "rb") as image_file, open(mask_path,
+                                                        "rb") as mask_file:
+            image = cv2.imread(image_file, cv2.IMREAD_GRAYSCALE)
+            mask = cv2.imread(mask_file, cv2.IMREAD_GRAYSCALE)
+            if self.transforms:
+                image = self.transforms(image)
+                mask = self.transforms(mask)
+            sample = {"image": image, "mask": mask}
+            return sample
+
     def __getitem__(self, index: int) -> Any:
         image_path = self.image_names[index]
         mask_path = self.mask_names[index]
@@ -118,5 +132,5 @@ class SegmentationDataset(VisionDataset):
             if self.transforms:
                 image = self.transforms(image)
                 mask = self.transforms(mask)
-            sample = {"image": image, "mask": mask}
-            return sample
+        sample = {"image": image, "mask": mask}
+        return sample
