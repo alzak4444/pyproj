@@ -23,7 +23,7 @@ from trainer import train_model
     type=int,
     help="Specify the number of epochs you want to run the experiment for.")
 @click.option("--batch-size",
-              default=8,
+              default=4,
               type=int,
               help="Specify the batch size for the dataloader.")
 def main(data_directory, exp_directory, epochs, batch_size):

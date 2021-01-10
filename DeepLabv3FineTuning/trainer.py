@@ -61,11 +61,11 @@ def train_model(model, criterion, dataloaders, optimizer, metrics, bpath,
 #                        par = torch.tensor([dx,dy])
 #                        par = par.cuda()
 #                        transs.append(kornia.Translate(par.repeat(batch_size, 1)))
-                    if np.random.uniform(0, 1.0) > 0.5:
-                        angle = np.random.uniform(0, 3.0)
-                        par = torch.tensor(angle)
-                        par = par.cuda()
-                        transs.append(kornia.Rotate(par.repeat(batch_size)))
+#                    if np.random.uniform(0, 1.0) > 0.5:
+#                        angle = np.random.uniform(0, 3.0)
+#                        par = torch.tensor(angle)
+#                        par = par.cuda()
+#                        transs.append(kornia.Rotate(par.repeat(batch_size)))
 
                     if len(transs) > 0:
                         tr1 = torch.nn.Sequential(*transs)
